@@ -24,11 +24,79 @@ The goal is to find hyperparameters that minimize the energy difference between 
 
 ##  Results 
 
-The Script is being ran for the whole `PEPCONF/bioactive/xyz` , 235 peptides the resultant csv files are added and are analyzed below. 
+The Script is being ran for the whole `PEPCONF/bioactive/xyz` , 235 peptides the resultant csv files are added and are analyzed below.
+For Bioactive peptides, `Spectral Clustering ` seems to be a superior method, we could test it out for all the peptides provided in `PEPCONF/bioactive/xyz` and can find a method which is better for all use cases. 
 
-Important Stats:
-1.  % which converged
-2.  Which model is better SC/LM? add stats 
-3.  Modes for Thershold and Resolution pairs - LM
-4.  Modes for Threshold and Resolution pairs - SC
-5.  Average Error in Energy after optimised 
+### Spectral Clustering 
+
+-  77 Peptides converged to target energy differecne out of 235 (Success rate of 32%)
+-  We can use this table to speed up calculations and to initialize the Spectral Clustering Model
+ 
+ #### Most Frequent Parameter Pairs (SC)
+
+| Threshold, Num Clusters   | Frequency |
+|---------|-----------|
+| 40,2    | 21        |
+| 45,2    | 20        |
+| 50,2    | 17        |
+| 40,5    | 15        |
+| 40,6    | 13        |
+| 40,4    | 12        |
+| 40,3    | 9         |
+| 40,15   | 8         |
+| 40,8    | 8         |
+| 75,2    | 8         |
+| 40,14   | 7         |
+| 70,15   | 6         |
+| 80,2    | 6         |
+| 40,11   | 5         |
+| 85,15   | 5         |
+| 40,12   | 4         |
+| 40,13   | 4         |
+| 50,10   | 4         |
+| 40,10   | 4         |
+| 50,7    | 4         |
+
+>  **Entries Covered**: 180  
+>  **Optimal Values Found For**: 76.50% of entries
+
+![SC scatter plot ](https://github.com/user-attachments/assets/16a5a89c-2478-47ee-b2dd-d2fb262b02b1)
+
+
+ ### Louvian Method 
+
+-  72 Peptides converged to target energy differecne out of 235 (Success rate of 30.6%)
+-  We can use this table to speed up calculations and to initialize the Louvian Method Clustering Model
+ 
+ #### Most Frequent Parameter Pairs (LM)
+
+| Resolution, Threshold | Frequency |
+|------------|-----------|
+| 0.1,40     | 39        |
+| 0.2,40     | 34        |
+| 0.3,40     | 8         |
+| 1.2,40     | 8         |
+| 1.2,50     | 8         |
+| 1,40       | 7         |
+| 0.4,40     | 7         |
+| 0.5,40     | 7         |
+| 0.8,40     | 6         |
+| 3,40       | 6         |
+| 3,70       | 6         |
+| 0.9,40     | 5         |
+| 3,50       | 5         |
+| 2.9,40     | 4         |
+| 3,45       | 4         |
+| 1.6,40     | 3         |
+| 3,85       | 3         |
+| 1.2,60     | 3         |
+| 2.7,50     | 3         |
+| 2.2,40     | 3         |
+
+> **Entries Covered**: 169  
+> **Optimal Values Found For**: 66%
+
+![LM Scatter Plot ](https://github.com/user-attachments/assets/80689025-b30a-4e59-b04d-49517afbeff0)
+
+
+ 
