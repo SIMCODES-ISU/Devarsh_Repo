@@ -63,8 +63,9 @@ Datasets Used :
 
 
 - Dipeptide
+  <img width="1097" height="1303" alt="New Project" src="https://github.com/user-attachments/assets/0746e60c-392a-4991-8198-644442cea1da" />
 
-  For the last set of job `885/1260` (70.2%) Converged, suggesting the sweet spot is around 4–6 clusters, but cluster number of 2,7,8,9,10 had high varience . Whereas for this run `blah/1260` (blah%) Converged, with lower overall varience and a sweet spot from 3-10 cluster number. Increasing covergnece by blah% and the average error decreases from 0.017 Hartree to blah Hartree having  blah % error reduction.
+  For the last set of job `885/1260` (70.2%) Converged, suggesting the sweet spot is around 4–6 clusters, but cluster number of 2,7,8,9,10 had high varience . Whereas for this run `1043/1260` (82.3%) Converged, with lower overall varience and a sweet spot from 5-8 cluster number. Increasing covergnece by 12.1% and the average error decreases from 0.017 Hartree to 0.013 Hartree having 23.5 % error reduction. The outliers in data can also be due to incorrect dataset files, which is already established. 
  
 
 
